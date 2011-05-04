@@ -26,7 +26,7 @@
        <!-- Disable the second-level cache -->
        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
 	
-<!-- 	<mapping class="com.onb.domain.Employee"/> -->
+	<mapping class="com.onb.domain.Employee"/>
 	
    </session-factory>
 </hibernate-configuration>
