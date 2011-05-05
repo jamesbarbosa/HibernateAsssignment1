@@ -3,15 +3,31 @@ package com.hibernateassignment.domain;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Transient;
 
 @Entity
 public class SoftwareDevelopmentTeam {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long softwareDevelopmentTeamId;
+	
+	@Transient
 	private List<SoftwareDeveloper> developers;
+	@Transient
 	private List<QA> qualityAssurance;
+	@Transient
 	private Manager softwareDevelopmentManager;
+	@Transient
 	private SoftwareDeveloper teamLeader;
-
+	
+	public Long getSoftwareDevelopmentTeamId() {
+		return softwareDevelopmentTeamId;
+	}
+	
 	public List<SoftwareDeveloper> getDevelopers() {
 		return developers;
 	}
